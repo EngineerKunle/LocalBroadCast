@@ -14,10 +14,14 @@ import android.widget.TextView;
 
 import com.tutorial.engineerkunle.localbroadcast.Service.MyIntentService;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView mTextView;
-    Button mButton;
+    @BindView(R.id.button) Button mButton;
     private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
@@ -25,16 +29,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mTextView = (TextView) findViewById(R.id.text);
-        mButton = (Button) findViewById(R.id.button);
+        ButterKnife.bind(this);
+    }
 
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d(TAG, "Service starting");
-                Intent i = new Intent(MainActivity.this, MyIntentService.class);
-                startService(i);
-            }
-        });
+    @OnClick(R.id.button)
+    public void onClick(View view){
+        Log.d(TAG, "has been clicked : Service starting");
+        Intent i = new Intent(MainActivity.this, MyIntentService.class);
+        startService(i);
     }
 
     @Override
