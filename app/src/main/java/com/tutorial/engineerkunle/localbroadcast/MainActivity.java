@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private BroadcastReceiver onNotice = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            String data = intent.getStringExtra("test");
+            String data = intent.getStringExtra("TextView");
 
             mTextView.setText(data);
 

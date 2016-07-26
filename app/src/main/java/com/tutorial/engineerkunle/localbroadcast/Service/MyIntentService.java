@@ -22,7 +22,7 @@ public class MyIntentService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         Log.d(TAG, "on handle called");
         Intent in = new Intent("sendData");
-        in.putExtra("test", "Your Name");
+        in.putExtra("TextView", "Your Name");
         Log.d(TAG, "sending broadcast");
         LocalBroadcastManager.getInstance(this).sendBroadcast(in);
 
