@@ -60,9 +60,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             String data = intent.getStringExtra("TextView");
-
             mTextView.setText(data);
-
         }
     };
 }

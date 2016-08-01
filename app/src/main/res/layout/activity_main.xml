@@ -9,32 +9,45 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tutorial.engineerkunle.localbroadcast.MainActivity">
 
-    <TextView
-        android:id="@+id/text"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hello" />
+        android:layout_marginTop="300dp"
+        android:id="@+id/relativeLayout">
+
+         <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hello" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignParentRight="true"
+            android:text="Large Text" />
+    </RelativeLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Button"
-        android:layout_below="@+id/text"
-        android:layout_toRightOf="@+id/text"
-        android:layout_toEndOf="@+id/text"
-        android:layout_marginLeft="63dp"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="142dp" />
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_marginBottom="102dp" />
+
 </RelativeLayout>
