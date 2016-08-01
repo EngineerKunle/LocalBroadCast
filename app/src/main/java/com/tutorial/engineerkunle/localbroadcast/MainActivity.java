@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.button) Button mButton;
     @BindString(R.string.title) String Title;
     private static final String TAG = MainActivity.class.getSimpleName();
-    private TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         IntentFilter mIntentFilter = new IntentFilter("sendData");
         LocalBroadcastManager.getInstance(this).registerReceiver(onNotice, mIntentFilter);
+
     }
 
     private BroadcastReceiver onNotice = new BroadcastReceiver() {
