@@ -3,5 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="title_margin">20dp</dimen>
+    <dimen name="margin_top">5dp</dimen>
     <dimen name="font_size">24sp</dimen>
+    <dimen name="list_size">16sp</dimen>
+    <dimen name="image_size">150px</dimen>
 </resources>
