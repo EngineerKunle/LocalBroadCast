@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">LocalBroadCast</string>
-    <string name="title">This is the title</string>
+    <string name="changed_text">Text has changed</string>
+    <string name="title">Center Text</string>
 </resources>

@@ -8,10 +8,10 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.tutorial.engineerkunle.localbroadcast.Activity.ListActivity;
 import com.tutorial.engineerkunle.localbroadcast.Service.MyIntentService;
 
 import butterknife.BindString;
@@ -22,9 +22,9 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.text) TextView mTextView;
-    @BindView(R.id.textView) TextView mText;
     @BindView(R.id.button) Button mButton;
-    @BindString(R.string.title) String Title;
+    @BindView(R.id.center_text) TextView mCenterView;
+    @BindString(R.string.title) String mTitle;
     private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
@@ -32,14 +32,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        mText.setText(Title);
+        mCenterView.setText(mTitle);
     }
 
     @OnClick(R.id.button)
     public void onClick(){
-        Log.d(TAG, "has been clicked : Service starting");
-        Intent i = new Intent(MainActivity.this, MyIntentService.class);
-        startService(i);
+        if(mTextView.getText() == "text has changed"){
+            mTextView.setText("hello");
+        } else {
+            Log.d(TAG, "has been clicked : Service starting");
+            Intent i = new Intent(MainActivity.this, MyIntentService.class);
+            startService(i);
+        }
+    }
+
+    @OnClick(R.id.nextView)
+    public void nextClick() {
+        Log.d(TAG, "button clicked");
+        Intent intent = new Intent(this, ListActivity.class);
+        startActivity(intent);
     }
 
     @Override

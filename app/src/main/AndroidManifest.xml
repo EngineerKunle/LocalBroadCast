@@ -15,8 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".Service.MyIntentService">
-        </service>
+
+        <service android:name=".Service.MyIntentService"></service>
+
+        <activity android:name=".Activity.ListActivity"></activity>
     </application>
 
 </manifest>
