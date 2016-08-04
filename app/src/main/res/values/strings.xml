@@ -2,4 +2,6 @@
     <string name="app_name">LocalBroadCast</string>
     <string name="changed_text">Text has changed</string>
     <string name="title">Center Text</string>
+    <string name="title_activity_map_places">MapPlacesActivity</string>
+    <string name="launch_button">Launch button</string>
 </resources>

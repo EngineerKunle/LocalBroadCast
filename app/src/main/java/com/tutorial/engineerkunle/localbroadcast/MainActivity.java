@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.tutorial.engineerkunle.localbroadcast.Activity.ListActivity;
+import com.tutorial.engineerkunle.localbroadcast.Activity.MapPlaceActivity;
 import com.tutorial.engineerkunle.localbroadcast.Service.MyIntentService;
 
 import butterknife.BindString;
@@ -49,8 +50,14 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.nextView)
     public void nextClick() {
         Log.d(TAG, "button clicked");
-        Intent intent = new Intent(this, ListActivity.class);
-        startActivity(intent);
+        Intent listActivityIntent = new Intent(this, ListActivity.class);
+        startActivity(listActivityIntent);
+    }
+
+    @OnClick(R.id.map_launch)
+    public void launchMap(){
+        Intent mapActivityIntent = new Intent(this, MapPlaceActivity.class);
+        startActivity(mapActivityIntent);
     }
 
     @Override
