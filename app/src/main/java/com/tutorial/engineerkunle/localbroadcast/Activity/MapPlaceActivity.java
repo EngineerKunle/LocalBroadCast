@@ -13,7 +13,6 @@ import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
 import com.tutorial.engineerkunle.localbroadcast.R;
 
-import butterknife.OnClick;
 
 public class MapPlaceActivity extends AppCompatActivity {
 
@@ -43,8 +42,6 @@ public class MapPlaceActivity extends AppCompatActivity {
         });
 
     }
-
-//    Å
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
